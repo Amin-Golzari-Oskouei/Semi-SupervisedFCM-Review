@@ -45,7 +45,7 @@ for repeat in range(Restarts):
     print(f'Proposed Algorithm: Restart {repeat+1}.')
     
     b = np.zeros(row)
-    tmp1 = np.random.randint(0, row, int(row*labeled_rate/100))
+    tmp1 = np.random.choice(row, int(row*labeled_rate/100), replace=False)
     b[tmp1] = 1
        
     if labeled_rate==0:
