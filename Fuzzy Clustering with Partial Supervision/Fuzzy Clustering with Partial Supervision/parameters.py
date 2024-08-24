@@ -15,49 +15,35 @@ def parameters(dataset, lable_true):
 
 
     # specific parameters
-    if dataset=='iris':
+    if dataset == 'iris':
+        alpha = 6.1  
+    elif dataset == 'balance':
+        alpha = 4.1  
+    elif dataset == 'breast':
         alpha = 2
-    elif dataset=='balance':
-        pass
-    elif dataset=='breast':
-        pass
-    elif dataset=='bupa':
-        pass
-    elif dataset=='cancer':
-        pass
-    elif dataset=='Car_evaluation':
-        pass
-    elif dataset=='dermatology':
-        pass
-    elif dataset=='diabet':
-        pass
-    elif dataset=='ecoli':
-        pass
-    elif dataset=='glass':
-        pass
-    elif dataset=='heberman':
-        pass
-    elif dataset=='ionosphere':
-        pass
-    elif dataset=='heart':
-        pass
-    elif dataset=='letters':
-        pass
-    elif dataset=='seed':
-        pass
-    elif dataset=='seismic':
-        pass
-    elif dataset=='synthetic':
-        pass
-    elif dataset=='spectfheart':
-        pass
-    elif dataset=='zoo':
-        pass
-    elif dataset=='wine':
-        pass
-    elif dataset=='thyroid':
-        pass
-    elif dataset=='soybean':
-        pass
-        
+    elif dataset == 'bupa':
+        alpha = 1.6  
+    elif dataset == 'cancer':
+        alpha = 9.6  
+    elif dataset == 'australian':
+        alpha = 1.1  
+    elif dataset == 'blood':
+        alpha = 1.6
+    elif dataset == 'diabet':
+        alpha = 1.1
+    elif dataset == 'heberman':
+        alpha = 5.6
+    elif dataset == 'seed':
+        alpha = 9.6
+    elif dataset == 'spectfheart':
+        alpha = 4.6
+    elif dataset == 'vowel':
+        alpha = 9.1
+    elif dataset == 'wine':
+        alpha = 2.6  
+    elif dataset == 'thyroid':
+        alpha = 2.6
+    elif dataset == 'waveform':
+        alpha = 9.6
+
     return k, t_max, Restarts, fuzzy_degree, alpha, f, labeled_rate
