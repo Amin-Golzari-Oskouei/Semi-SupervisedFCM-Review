@@ -20,7 +20,7 @@ def parameters(dataset, lable_true):
     elif dataset == 'balance':
         alpha = 4.1  
     elif dataset == 'breast':
-        alpha = 2
+        alpha = 3.1
     elif dataset == 'bupa':
         alpha = 1.6  
     elif dataset == 'cancer':
