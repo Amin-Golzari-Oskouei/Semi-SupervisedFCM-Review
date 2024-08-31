@@ -15,51 +15,50 @@ def parameters(dataset, lable_true):
 
 
     # specific parameters
-    if dataset=='iris':
-        alpha = 2
-        alpha2 = 2
-
-    elif dataset=='balance':
-        pass
-    elif dataset=='breast':
-        pass
-    elif dataset=='bupa':
-        pass
-    elif dataset=='cancer':
-        pass
-    elif dataset=='Car_evaluation':
-        pass
-    elif dataset=='dermatology':
-        pass
-    elif dataset=='diabet':
-        pass
-    elif dataset=='ecoli':
-        pass
-    elif dataset=='glass':
-        pass
-    elif dataset=='heberman':
-        pass
-    elif dataset=='ionosphere':
-        pass
-    elif dataset=='heart':
-        pass
-    elif dataset=='letters':
-        pass
-    elif dataset=='seed':
-        pass
-    elif dataset=='seismic':
-        pass
-    elif dataset=='synthetic':
-        pass
-    elif dataset=='spectfheart':
-        pass
-    elif dataset=='zoo':
-        pass
-    elif dataset=='wine':
-        pass
-    elif dataset=='thyroid':
-        pass
-    elif dataset=='soybean':
-        pass
+    if dataset == 'iris':
+        alpha = 1.1
+        alpha2 = 1.6 
+    elif dataset == 'balance':
+        alpha = 9.6
+        alpha2 = 2.1  
+    elif dataset == 'breast':
+        alpha = 1.6
+        alpha2 = 9.6
+    elif dataset == 'bupa':
+        alpha = 1.1
+        alpha2 = 6.1  
+    elif dataset == 'cancer':
+        alpha = 2.6
+        alpha2 = 3.6  
+    elif dataset == 'australian':
+        alpha = 6.1
+        alpha2 = 9.1  
+    elif dataset == 'blood':
+        alpha = 1.1
+        alpha2 = 1.6
+    elif dataset == 'diabet':
+        alpha = 1.1
+        alpha2 = 7.1
+    elif dataset == 'heberman':
+        alpha = 3.1
+        alpha2 = 1.1
+    elif dataset == 'seed':
+        alpha = 1.1
+        alpha2 = 2.1
+    elif dataset == 'spectfheart':
+        alpha = 4.1
+        alpha2 = 2.6
+    elif dataset == 'vowel':
+        alpha = 9.6
+        alpha2 = 8.1
+    elif dataset == 'wine':
+        alpha = 5.1
+        alpha2 = 9.1  
+    elif dataset == 'thyroid':
+        alpha = 1.6
+        alpha2 = 1.1
+    elif dataset == 'waveform':
+        alpha = 3.6
+        alpha2 = 1.1
         
     return k, t_max, Restarts, fuzzy_degree, alpha, alpha2, f, labeled_rate
