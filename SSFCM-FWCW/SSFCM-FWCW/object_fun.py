@@ -1,0 +1,16 @@
+def object_fun(row, col, k, Cluster_elem, landa, center_points, fuzzy_degree, w, z, q, p, data, f, alpha, b):
+    import math
+    import numpy as np
+    distance = np.zeros([k, row, col])
+    dNK = np.zeros([row, k])
+    for j in range(k):
+        distance[j, :, :] = (1 - np.exp((-1 * np.tile(landa, (row, 1))) * ((data - np.tile(center_points[j, :], (row, 1))) ** 2)))
+        WBETA = np.transpose(z[j, :] ** q)
+        WBETA[np.where(np.isinf(WBETA))] = 0
+        dNK[:, j] = np.squeeze(np.matmul(w[j] ** p * np.reshape(distance[j, :, :], (row, col)), np.expand_dims(WBETA, 1)))
+    j_fun1 = np.sum(np.sum(dNK * (Cluster_elem ** fuzzy_degree)))
+    
+    mf2 = (Cluster_elem - (np.transpose(np.tile(b, (k,1))) * f )) ** fuzzy_degree
+    j_fun2 = alpha * np.sum(np.sum(mf2 * dNK))
+    
+    return j_fun1 + j_fun2
