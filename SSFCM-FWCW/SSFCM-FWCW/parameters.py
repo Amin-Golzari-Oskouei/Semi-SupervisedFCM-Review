@@ -18,92 +18,82 @@ def parameters(dataset, lable_true, data, col):
     else:
         f[np.arange(lable_true.size), lable_true.astype(int) - 1] = 1
     
-    # specific parameters
-    if dataset=='iris':
-        q = 2                        # the value for the feature weight updates.
-        beta_memory = 0            # amount of memory for the cluster weight updates.
-        l = 1                        # i must take a value in (0,1]
+# specific parameters
+    if dataset == 'iris':
+        q = 2
+        beta_memory = 0
+        l = 1
         alpha = 2
-    elif dataset=='balance':
-        q = 4                        # the value for the feature weight updates.
-        beta_memory = 0.2            # amount of memory for the cluster weight updates.
-        l = 0.0001  
-    elif dataset=='breast':
+    elif dataset == 'balance':
+        q = 10                        # the value for the feature weight updates.
+        beta_memory = 0.1            # amount of memory for the cluster weight updates.
+        l = 0.1
+        alpha = 4    
+    elif dataset == 'new_breast':
         q = -2                       # the value for the feature weight updates.
-        beta_memory = 0.3            # amount of memory for the cluster weight updates.
-        l = 0.1  
-    elif dataset=='bupa':
+        beta_memory = 0            # amount of memory for the cluster weight updates.
+        l = 0.0001
+        alpha = 1
+    elif dataset == 'bupa':
         q = -4                       # the value for the feature weight updates.
-        beta_memory = 0.3            # amount of memory for the cluster weight updates.
-        l = 1 
-    elif dataset=='cancer':
+        beta_memory = 0            # amount of memory for the cluster weight updates.
+        l = 1
+        alpha = 1  
+    elif dataset == 'cancer':
         q = -2                       # the value for the feature weight updates.
-        beta_memory = 0.             # amount of memory for the cluster weight updates.
+        beta_memory = 0.3             # amount of memory for the cluster weight updates.
+        l = 0.1   
+        alpha = 2
+    elif dataset == 'australian':
+        q = -2                       # the value for the feature weight updates.
+        beta_memory = 0.3             # amount of memory for the cluster weight updates.
         l = 0.1 
-    elif dataset=='zoo':
-        q = 6                        # the value for the feature weight updates.
-        beta_memory = 0.3            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='dermatology':
-        q = 4                        # the value for the feature weight updates.
-        beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.0001 
-    elif dataset=='diabet':
+        alpha = 1    
+    elif dataset == 'blood':
+        q = 4                       # the value for the feature weight updates.
+        beta_memory = 0.1             # amount of memory for the cluster weight updates.
+        l = 0.0001
+        alpha = 5   
+    elif dataset == 'diabet':
         q = -2                        # the value for the feature weight updates.
-        beta_memory = 0.            # amount of memory for the cluster weight updates.
-        l = 0.0001 
-    elif dataset=='ecoli':
-        q = -10                        # the value for the feature weight updates.
-        beta_memory = 0.2            # amount of memory for the cluster weight updates.
-        l = 1 
-    elif dataset=='glass':
-        q = -8                        # the value for the feature weight updates.
-        beta_memory = 0.2            # amount of memory for the cluster weight updates.
-        l = 0.0001 
-    elif dataset=='wine':
+        beta_memory = 0.3            # amount of memory for the cluster weight updates.
+        l = 0.01
+        alpha = 2 
+    elif dataset == 'heberman':
+        q = 2                        # the value for the feature weight updates.
+        beta_memory = 0.3            # amount of memory for the cluster weight updates.
+        l = 0.0001
+        alpha = 10
+    elif dataset == 'seed':
         q = -4                        # the value for the feature weight updates.
-        beta_memory = 0.3            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='thyroid':
-        q = -6                        # the value for the feature weight updates.
-        beta_memory = 0.0            # amount of memory for the cluster weight updates.
-        l = 0.01 
-    elif dataset=='synthetic':
-        q = -8                        # the value for the feature weight updates.
-        beta_memory = 0.0            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='spectfheart':
-        q = -2                        # the value for the feature weight updates.
+        beta_memory = 0            # amount of memory for the cluster weight updates.
+        l = 0.0001
+        alpha = 2
+    elif dataset == 'spectfheart':
+        q = 2                        # the value for the feature weight updates.
+        beta_memory = 0           # amount of memory for the cluster weight updates.
+        l = 1
+        alpha = 10
+    elif dataset == 'vowel':
+        q = 8                        # the value for the feature weight updates.
         beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='letters':
+        l = 0.0001
+        alpha = 1
+    elif dataset == 'wine':
+        q = -2                        # the value for the feature weight updates.
+        beta_memory = 0            # amount of memory for the cluster weight updates.
+        l = 1
+        alpha = 1  
+    elif dataset == 'thyroid':
+        q = 8                        # the value for the feature weight updates.
+        beta_memory = 0.1            # amount of memory for the cluster weight updates.
+        l = 0.0001
+        alpha = 2
+    elif dataset == 'waveform':
         q = 2                        # the value for the feature weight updates.
         beta_memory = 0.3            # amount of memory for the cluster weight updates.
-        l = 1 
-    elif dataset=='ionosphere':
-        q = 2                        # the value for the feature weight updates.
-        beta_memory = 0.2            # amount of memory for the cluster weight updates.
-        l = 0.0001 
-    elif dataset=='heberman':
-        q = 2                        # the value for the feature weight updates.
-        beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.0001 
-    elif dataset=='heart':
-        q = -4                        # the value for the feature weight updates.
-        beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='seed':
-        q = -2                        # the value for the feature weight updates.
-        beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='Car_evaluation':
-        q = -2                        # the value for the feature weight updates.
-        beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.1 
-    elif dataset=='soybean':
-        q = -10                        # the value for the feature weight updates.
-        beta_memory = 0.1            # amount of memory for the cluster weight updates.
-        l = 0.0001 
+        l = 0.0001
+        alpha = 1
     
     
     
