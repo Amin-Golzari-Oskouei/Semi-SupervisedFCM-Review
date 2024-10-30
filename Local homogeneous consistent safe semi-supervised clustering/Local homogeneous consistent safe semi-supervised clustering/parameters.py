@@ -17,50 +17,64 @@ def parameters(dataset, lable_true):
 
     # specific parameters
     if dataset == 'iris':
-        alpha = 2
-        alpha2 = 2.1 
-        p=5
+        alpha = 0.5
+        alpha2 = 10 
+        p=3
     elif dataset == 'balance':
-        alpha = 9.6
-        alpha2 = 2.1  
-    elif dataset == 'breast':
-        alpha = 1.6
-        alpha2 = 9.6
+        alpha = 0.5
+        alpha2 = 100
+        p = 1  
+    elif dataset == 'new_breast':
+        alpha = 0.05
+        alpha2 = 100
+        p=3
     elif dataset == 'bupa':
-        alpha = 1.1
-        alpha2 = 6.1  
+        alpha = 0.05
+        alpha2 = 100
+        p=1  
     elif dataset == 'cancer':
-        alpha = 2.6
-        alpha2 = 3.6  
+        alpha = 0.001
+        alpha2 = 10
+        p=3   
     elif dataset == 'australian':
-        alpha = 6.1
-        alpha2 = 9.1  
+        alpha = 10
+        alpha2 = 100
+        p=5   
     elif dataset == 'blood':
-        alpha = 1.1
-        alpha2 = 1.6
+        alpha = 10
+        alpha2 = 10
+        p = 5 
     elif dataset == 'diabet':
-        alpha = 1.1
-        alpha2 = 7.1
+        alpha = 10
+        alpha2 = 100
+        p=5 
     elif dataset == 'heberman':
-        alpha = 3.1
-        alpha2 = 1.1
+        alpha = 0.5
+        alpha2 = 100
+        p=7 
     elif dataset == 'seed':
-        alpha = 1.1
-        alpha2 = 2.1
+        alpha = 0.1
+        alpha2 = 1
+        p=3 
     elif dataset == 'spectfheart':
-        alpha = 4.1
-        alpha2 = 2.6
+        alpha = 100
+        alpha2 = 100
+        p=7 
     elif dataset == 'vowel':
-        alpha = 9.6
-        alpha2 = 8.1
+        alpha = 0.01
+        alpha2 = 10
+        p=1 
     elif dataset == 'wine':
-        alpha = 5.1
-        alpha2 = 9.1  
+        alpha = 100
+        alpha2 = 0.1
+        p=3   
     elif dataset == 'thyroid':
-        alpha = 1.6
-        alpha2 = 1.1
+        alpha = 10
+        alpha2 = 1
+        p=7 
     elif dataset == 'waveform':
-        alpha = 3.6
-        alpha2 = 1.1
+        alpha = 0.05
+        alpha2 = 100
+        p=1
         
     return k, t_max, Restarts, fuzzy_degree, alpha, alpha2, f, labeled_rate,p
