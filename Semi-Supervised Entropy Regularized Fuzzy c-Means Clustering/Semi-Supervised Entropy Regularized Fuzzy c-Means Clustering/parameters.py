@@ -15,34 +15,34 @@ def parameters(dataset, lable_true):
 
     # specific parameters
     if dataset == 'iris':
-        landa = 1
+        landa = 10
     elif dataset == 'balance':
-        pass
-    elif dataset == 'breast':
-        pass
+        landa = 1
+    elif dataset == 'new_breast':
+        landa = 1
     elif dataset == 'bupa':
-        pass
+        landa = 6
     elif dataset == 'cancer':
-        pass
+        landa = 7
     elif dataset == 'australian':
-        pass
+        landa = 2
     elif dataset == 'blood':
-        pass
+        landa = 1
     elif dataset == 'diabet':
-        pass
+        landa = 1
     elif dataset == 'heberman':
-        pass
+        landa = 1
     elif dataset == 'seed':
-        pass
+        landa = 10
     elif dataset == 'spectfheart':
-        pass
+        landa = 4
     elif dataset == 'vowel':
-        pass
+        landa = 1
     elif dataset == 'wine':
-        pass
+        landa = 10
     elif dataset == 'thyroid':
-        pass
+        landa = 1
     elif dataset == 'waveform':
-        pass
+        landa = 1
 
     return k, t_max, Restarts, f, labeled_rate, landa
